@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    --background-color: black;
+    --text-color: white;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#hero {
+    display: grid;
+    justify-items: center;
+    background-image: linear-gradient(to bottom, rgb(255, 108, 108), rgb(0, 0, 0));;
+    padding: 10%;
+}
+
+#hero .heading {
+    color: var(--background-color);
+    background-image: linear-gradient(to right, rgb(255, 108, 108), rgb(255, 196, 87));
+    font-size: 2rem;
+}
+
+#about .heading {
+    color: var(--background-color);
+    background-image: linear-gradient(to right, rgb(255, 108, 108), rgb(255, 196, 87));
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about {
+    display: grid;
+    justify-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#about p {
+    padding: 2%;
+}
+
+#projects {
+    display: flex;
+    padding: 5%;
+}
+
+.project-button {
+    background-color: aqua;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-top: 2px solid;
+    border-image:  linear-gradient(to right, rgb(255, 108, 108), rgb(255, 196, 87)) 1;
+}
+
+.footer-link {
+    margin: 2.5%;
+}

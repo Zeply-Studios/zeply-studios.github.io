@@ -1,90 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title>Zeply Studios | Open Source Software</title>
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeply Studios</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <div class="hero">
-        <h1>Zeply Studios</h1>
-        <h2>Non-Profit Development Projects</h2>
-    </div>
-
-    <section>
-        <h2>About Us</h2>
-        <p class="section-content">We are a team of developers and artists dedicated to releasing open-source and free software.</p>
-    </section>
-
-    <section>
-        <h2>Our Team</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://cdn.discordapp.com/avatars/543047770936967168/c87342fd7df40e6653fcc04c901a6eff.png?size=4096"
-                    width="200px">
-                <p class="card-title">Joseph Bobby</p>
-                <p class="card-subtitle">Lead Developer</p>
+    <body>
+        <section id="hero">
+            <span class="heading">Zeply Studios</span>
+            <h3>Software made for the public. Free Forever.</h3>
+        </section>
+        <section id="about">
+             <span class="heading">About Us</span>
+            <p>Zeply was built to make powerful software freely available to everyone. Too many tools are hidden behind paywalls or funded through the collection and exploitation of user data. Our goal is to provide accessible alternatives that respect your privacy and put users first.</p>
+        </section>
+        <section id="projects">
+            <div class="project">
+                <h4 class="project-title">Project Title</h4>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit similique magnam commodi harum facilis natus illum iste eligendi sed aut. Perspiciatis ut vero modi quibusdam aliquam quia in alias temporibus.</p>
+                <button class="project-button"><a href="" class="project-url">View Project</a></button>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Our Projects</h2>
-        <div id="carousel" class="cards carousel" style="overflow-x: scroll; flex-wrap: nowrap !important;">
-        </div>
-    </section>
-
-    <footer>
-        <p><a href="https://github.com/Zeply-Studios">Github</a></p>
-        <p><a href="https://github.com/Zeply-Studios">Instagram</a></p>
-        <p><a href="https://discord.gg/mTqaCWZXKA">Discord</a></p>
-    </footer>
-
-    <script>
-        const container = document.getElementById("carousel");
-    
-        fetch("/data.json").then(async res => {
-            const items = await res.json();
-            console.log(items);
-    
-            for (const item of items) {
-                const card = document.createElement("a");
-    
-                card.className = "card";
-                card.href = item.link;
-                card.style.minHeight = "250px";
-                card.style.width = "200px"
-    
-                const img = document.createElement("img");
-                img.src = item.img;
-                img.width = "200";
-                img.alt = "Img"
-    
-                const title = document.createElement("p");
-                title.className = "card-title";
-                title.textContent = item.title;
-    
-                const subtitle = document.createElement("p"); 
-                subtitle.className = "card-subtitle";
-                subtitle.textContent = item.subtitle;
-    
-                const tag = document.createElement("p");
-                tag.className = "card-tag";
-                tag.textContent = item.tag;
-                tag.dataset.tag = item.tag;
-    
-                card.appendChild(img);
-                card.appendChild(title);
-                card.appendChild(subtitle);
-                card.appendChild(tag);
-    
-                container.appendChild(card);
-            }
-        })
-    </script>
-</body>
-
+            <div class="project">
+                <h4 class="project-title">Project Title</h4>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi obcaecati praesentium deleniti voluptate aliquam omnis unde dignissimos beatae neque delectus rem quod suscipit molestias sequi, dolor ad veniam ducimus fuga.</p>
+                <button class="project-button"><a href="" class="project-url">View Project</a></button>
+            </div>
+            <div class="project">
+                <h4 class="project-title">Project Title</h4>
+                <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi rem expedita accusamus minima esse ab illo labore in exercitationem delectus, modi dolorem eos iste incidunt adipisci minus, eaque non assumenda.</p>
+                <button class="project-button"><a href="" class="project-url">View Project</a></button>
+            </div>
+        </section>
+        <section id="footer">
+            <a href="" class="footer-link">Discord Server</a>
+            <a href="" class="footer-link">Github</a>
+            <a href="" class="footer-link">Twitter</a>
+        </section>
+    </body>
 </html>
