@@ -70,7 +70,7 @@ a {
 }
 
 #footer {
-    display: flex;
+    display: grid;
     justify-content: center;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
@@ -78,6 +78,6 @@ a {
     border-image:  linear-gradient(to right, rgb(255, 108, 108), rgb(255, 196, 87)) 1;
 }
 
-.footer-link {
-    margin: 2.5%;
+#footer p {
+    width: fit-content;
 }
